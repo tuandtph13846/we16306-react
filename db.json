@@ -1,0 +1,14 @@
+{
+  "products": [
+    {
+      "name": "Thuốc diệt cỏ",
+      "price": "123456",
+      "id": 2
+    },
+    {
+      "name": "thuan",
+      "price": "123456",
+      "id": 3
+    }
+  ]
+}
