@@ -140,7 +140,7 @@ function App() {
     
           
 
-        <Route path="admin" element={<AdminLayout/>}> 
+        <Route path="admin" element={<PrivateRouter><AdminLayout/></PrivateRouter>}> 
           <Route index element={<Navigate to="dashboard"/>} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="product" >

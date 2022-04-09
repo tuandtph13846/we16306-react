@@ -55,5 +55,8 @@ const Home = (props: Props) => {
 
 
   )
+
+ 
 }
+
 export default Home
