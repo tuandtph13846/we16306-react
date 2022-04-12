@@ -1,15 +1,18 @@
-import React from 'react'
+
 import Menu from './Menu'
-import Search from './Search'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link, } from 'react-router-dom';
+
 import { isAuthenticate } from '../utils/localStorage'
-
+const {user} = isAuthenticate();
 
 const Header = () => {
-    const { user } = isAuthenticate();
-    console.log(user);
-
+    
+    // console.log(user);
+    const logout = () => {
+        localStorage.removeItem("user");
+        window.location.reload();
+    }
     return (
 
 
@@ -33,16 +36,11 @@ const Header = () => {
 
                 </div>
                 <div className="mr-10 ">
-                    {user ?
-
-                        <div className="flex flex-nowrap">
+                    {user ?<div className="flex flex-nowrap">
                             <div className="text-3xl">Xin chào<a href="" id="email">{user.name}</a></div>
-                            <div className="bg-cyan-600 hover:bg-cyan-100 text-black font-bold py-2 px-4 rounded-full h-10 ml-4"><a href="">Đăng Xuất</a>
-
+                            <div className="bg-cyan-600 hover:bg-cyan-100 text-black font-bold py-2 px-4 rounded-full h-10 ml-4"><Link to={`/`} className="" onClick={() => { logout() }} >logout</Link>
                             </div>
-                        </div> :
-
-                        <div>
+                        </div>:<div>
                             <div className="sign-in">
                                 <a href="signin">Đăng nhập</a>
                             </div>
@@ -50,6 +48,7 @@ const Header = () => {
                                 <a href="signup">Đăng kí</a>
                             </div>
                         </div>
+  
                     }
 
 

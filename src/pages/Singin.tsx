@@ -14,6 +14,7 @@ const Signin = () => {
     const onSubmit: SubmitHandler<FormValues> = async (data) => {
         const { data: user } = await signin(data);
         authenticate(user, () => navigate('/'));
+        window.location.reload();    
     }
     return (
         <div className="signinform">
