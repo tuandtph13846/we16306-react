@@ -14,7 +14,7 @@ const ManagerProduct = (props: ManagerProductProps) => {
     <div className='shadow overflow-hidden border-b border-gray-200 sm:rounded-lg'>
 
       <div className="btn-e bg-blue-500 text-white inline-block py-3 px-5 rounded w-20 ">
-        <Link to={`/admin/product/add`}>Add</Link>
+        <Link className="" to={`/admin/product/add`}>Add</Link>
       </div>
 
 

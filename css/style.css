@@ -1,15 +1,4 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
---*/
 
-/* reset code */
 
 html {
     scroll-behavior: smooth;
@@ -3170,7 +3159,7 @@ p.product_descr {
 	background:#eb5367;
 }
 .desc1 h3{
-	color: #333333;
+	color: #ffffff;
 	font-size: 1.4em;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -3206,10 +3195,11 @@ p.product_descr {
 .det_nav h4{
 	line-height:1.8em;
 	font-size: 1em;
-	color: #555555;
+	color: white;
 	text-transform:uppercase;
 	margin-bottom: 4%;
 }
+
 .det_nav ul li{
 	display: inline-block;
 	width: 23.33333%;
@@ -5191,5 +5181,8 @@ h3.c-head{
 	.how_to p {
 		font-size: 12px;
 	}
+}
+.container-detail{
+	background-image: url(../images/);
 }
 

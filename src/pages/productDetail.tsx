@@ -27,7 +27,7 @@ const ProductDetail = (props: ListProductDetail) => {
     // }, [id])
     
   return (
-    <div className="container">
+    <div className="container-detail">
   <div className="row single">
     <div className="col-md-9 span-single">
       <div className="single_left">
@@ -49,14 +49,18 @@ const ProductDetail = (props: ListProductDetail) => {
           
           
           <div className="det_nav text-5xl">
-            <h4>
+            <h4 className="">
               {props.data.name}
             </h4>
           </div>
-          <button className="left text-3xl">{props.data.price} VNĐ</button> <br />
           
+          <div className="det_nav text-5xl">
+            <h4 className="">
+              {props.data.price} VNĐ
+            </h4>
+          </div>
           <div className="filter-by-color">
-            <h3>Filter by Color</h3>
+            <h3 className="">Filter by Color</h3>
             <ul className="w_nav2">
               <li><a className="color1" href="#" /></li>
               <li><a className="color2" href="#" /></li>
