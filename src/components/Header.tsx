@@ -25,7 +25,7 @@ const Header = () => {
                 </div>
                 <div className="mr-20 ">
 
-                    <Menu />
+                    <Menu/>
 
                 </div>
 

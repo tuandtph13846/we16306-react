@@ -44,8 +44,12 @@ const ProductAdd = (props: ProductAddProps) => {
                 {errors.name && errors.name.type === "minLength" && <span>Min length</span>}
                 <span className="block text-sm font-medium text-slate-700 mt-5">Price</span>
                 <input type="number" className="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 w-96" {...register('price')}/>
+
+
                 <span className="block text-sm font-medium text-slate-700 mt-5">Image</span>
                 <input type="file" id="" {...register('img')} onChange={(e)=>{setImage(e.target.files[0])}} />
+
+                
                 <button className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-16 mt-5  ">Add</button>
             </label>   
         </form>

@@ -5,8 +5,6 @@ import { ProductType } from '../types/product'
 type ManagerProductProps = {
   data: ProductType[],
   onRemove: (id: number) => void
-
-
 }
 
 const ManagerProduct = (props: ManagerProductProps) => {

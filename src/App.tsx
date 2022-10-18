@@ -58,7 +58,6 @@ function App() {
     setProduct([...products,data])
   }
   const onHandleUpdate = async (product: ProductType) => {
-    // console.log(product);
   const { data } = await update(product)
   setProduct(products.map(item => item._id == data._id ? data : item));
   }
@@ -129,7 +128,7 @@ function App() {
       <Routes>
         <Route path="/" element={<WebsiteLayout/>}>
           <Route index element={<Home data={products}/>} />
-          <Route path="product">
+          <Route path="product">  
                   <Route index  element={<Product data={products}/>} />
                   <Route path=":id" element={<ProductDetail data={products} onListDetail={ListProductDetail}/>} />
               </Route>
@@ -137,9 +136,6 @@ function App() {
               <Route path="signup" element= {<Signup/>}/>
           <Route path="signin" element= {<Signin/>}/>  
         </Route>
-    
-          
-
         <Route path="admin" element={<PrivateRouter><AdminLayout/></PrivateRouter>}> 
           <Route index element={<Navigate to="dashboard"/>} />
           <Route path="dashboard" element={<Dashboard />} />
@@ -153,13 +149,10 @@ function App() {
                     <Route path="add" element={<CategoryAdd  onAdd={CateonHandleAdd}/>} />
                     <Route path=":id/edit" element={<CategoryEdit onUpdate={CateonHandleUpdate}/>} />
           </Route> 
-
           <Route path="auth" element={<ManagerAuth data={auths} onRemove={removeAuth}/>} />
         </Route>  
     </Routes>
     </div>
-    
-
   )
 }
 
